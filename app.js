@@ -1,7 +1,7 @@
 // ---------------------------------------------------------------------------
 // Embedded fallback data (mirrors data/*.json)
 // ---------------------------------------------------------------------------
-"use strict";
+
 const TOPICS_FALLBACK = {
   title: "What interests you?",
   subtitle:
