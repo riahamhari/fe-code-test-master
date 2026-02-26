@@ -20,3 +20,11 @@ All state is managed locally in the browser, with no backend or persistence laye
 - Data loaded via `fetch()` from static JSON files, with a graceful fallback if loading fails
 
 ---
+
+## Running the project locally
+
+1. Open the project folder in VS Code
+2. Install the **Live Server** extension
+3. Right-click `index.html` → **Open with Live Server**
+
+The app will open automatically in your browser.
