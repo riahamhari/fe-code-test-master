@@ -123,10 +123,6 @@ const state = {
 let topicsData = null;
 let newslettersData = null;
 
-// ---------------------------------------------------------------------------
-// DOM refs (cached once after DOMContentLoaded)
-// ---------------------------------------------------------------------------
-
 const els = {
   backBtn: document.getElementById("back-btn"),
   nextBtn: document.getElementById("next-btn"),
