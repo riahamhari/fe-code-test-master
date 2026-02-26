@@ -128,7 +128,8 @@ body {
   height: 100%;
   background: var(--accent);
   transition: width 0.4s ease;
-  border-radius: var(--progress-radius);
+  border-top-right-radius: var(--progress-radius);
+  border-bottom-right-radius: var(--progress-radius);
 }
 
 /* =========================================
