@@ -1,0 +1,13 @@
+1. Asked for advice on an appropriate folder and file structure for a no-build, no-framework frontend task.
+
+2. Asked for recommendations on accessible patterns for selectable cards (keyboard support, ARIA roles).
+
+3. Asked for a review of progress bar accessibility, including whether aria-valuenow was required.
+
+4. Asked for guidance on naming functions clearly and consistently in a small vanilla JS codebase.
+
+5. Asked for feedback on render patterns and state-driven UI updates in a simple SPA-style implementation.
+
+6. Asked for suggestions on improving readability and maintainability of navigation logic.
+
+7. Asked for help drafting concise JSDoc comments to clearly document function responsibilities.

@@ -1,0 +1,34 @@
+{
+  "title": "What interests you?",
+  "subtitle": "Select your favourite topics and we'll recommend what to explore next. Tag your interests with a star",
+  "choices": [{
+    "id": "news",
+    "title": "News & Current Affairs",
+    "description": "Stay informed with politics and the environment, plus the latest from the US."
+  },
+  {
+    "id": "lifestyle",
+    "title": "Lifestyle & Luxury",
+    "description": "Discover fashion trends, travel inspiration, restaurant reviews and tips for living in style."
+  },
+  {
+    "id": "puzzles",
+    "title": "Puzzle & Crosswords",
+    "description": "Challenge yourself with our best crossword clues and quiz questions, plus insights from our puzzles editor."
+  },
+  {
+    "id": "sports",
+    "title": "Sports",
+    "description": "From football to Wimbledon, enjoy exclusive updates and coverage of top events."
+  },
+  {
+    "id": "arts",
+    "title": "Arts & Culture",
+    "description": "Explore books, theatre, and TV with expert reviews and recommendations."
+  },
+  {
+    "id": "business",
+    "title": "Business & Money",
+    "description": "Expert advice on personal finance, property, and insights for entrepreneurs"
+  }]
+}

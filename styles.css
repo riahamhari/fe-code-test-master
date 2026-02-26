@@ -1,0 +1,361 @@
+/* =========================================
+   Reset & base
+   ========================================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --accent: #246eb9;
+  --accent-bg: #f5f9ff;
+  --btn-hover: #daecff;
+  --btn-hover-next: #1064b9;
+  --text: #121212;
+  --text-muted: #666;
+  --border: #ddd;
+  --bg: #fff;
+  --progress-track: #ebebeb;
+  --font: "Raleway", sans-serif;
+  --nav-height: 56px;
+  --max-width: 960px;
+  --gutter: 24px;
+  --radius: 16px;
+  --progress-radius: 99px;
+}
+
+html {
+  font-family: var(--font);
+  color: var(--text);
+  background: var(--bg);
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* =========================================
+   Header & nav
+   ========================================= */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--nav-height);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.step-indicator {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.btn-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  transition: opacity 0.15s ease;
+  min-width: 44px;
+  min-height: 36px;
+  border: 2px solid;
+}
+
+.btn-nav--next:hover:not(.is-hidden) {
+  background: var(--btn-hover-next);
+  border-color: var(--btn-hover-next);
+}
+
+#back-btn:hover:not(.is-hidden) {
+  background: var(--btn-hover);
+}
+
+.btn-nav:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.btn-nav--next {
+  color: var(--bg);
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+#back-btn {
+  color: var(--accent);
+  background: var(--bg);
+}
+
+.btn-nav.is-hidden {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.icon-chevron {
+  width: 10px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
+/* =========================================
+   Progress bar
+   ========================================= */
+.progress-bar {
+  height: 4px;
+  background: var(--progress-track);
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.4s ease;
+  border-radius: var(--progress-radius);
+}
+
+/* =========================================
+   Main content area
+   ========================================= */
+.main-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 52px var(--gutter) 80px;
+  outline: none; /* focus is managed in JS */
+}
+
+/* =========================================
+   Page heading (topics / newsletters steps)
+   ========================================= */
+.page-heading {
+  margin-bottom: 36px;
+}
+
+.page-title {
+  font-size: clamp(1.625rem, 3.5vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+
+.page-subtitle {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  max-width: 580px;
+}
+
+/* =========================================
+   Card grid
+   ========================================= */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+/* =========================================
+   Card
+   ========================================= */
+.card {
+  position: relative;
+  padding: 20px 20px 20px 20px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  cursor: pointer;
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease,
+    box-shadow 0.15s ease;
+  text-align: left;
+  /* Accessible: announced as a checkbox */
+}
+
+.card:hover {
+  border-color: #bbb;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+}
+
+.card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.card[aria-checked="true"] {
+  border-color: var(--accent);
+  background: var(--accent-bg);
+}
+
+.card[aria-checked="true"]:hover {
+  border-color: var(--accent);
+}
+
+/* Frequency badge (newsletters only) */
+.card-badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: #f0f0f0;
+  padding: 2px 8px;
+  border-radius: 20px;
+  margin-bottom: 9px;
+}
+
+.card[aria-checked="true"] .card-badge {
+  background: rgb(18 28 196 / 10%);
+  color: var(--accent);
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 6px;
+  /* leave room for star on the right */
+  padding-right: 28px;
+}
+
+.card-description {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+/* Star indicator — animates in when selected */
+.card-star {
+  position: absolute;
+  top: 18px;
+  right: 16px;
+  width: 20px;
+  height: 20px;
+  color: var(--accent);
+  opacity: 0;
+  transform: scale(0.55);
+  transition:
+    opacity 0.15s ease,
+    transform 0.2s ease;
+  pointer-events: none;
+}
+
+.card[aria-checked="true"] .card-star {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* =========================================
+   Summary / thank-you page
+   ========================================= */
+.summary-heading {
+  margin-bottom: 48px;
+}
+
+.summary-title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+
+.summary-subtitle {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  max-width: 540px;
+}
+
+.summary-panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.summary-panel {
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.summary-panel-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.summary-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.summary-item {
+  font-size: 0.95rem;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.summary-item::before {
+  content: "";
+  display: inline-block;
+  min-width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.summary-empty {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* =========================================
+   Responsive — mobile
+   ========================================= */
+@media (max-width: 580px) {
+  .main-content {
+    padding-top: 36px;
+    padding-bottom: 60px;
+  }
+
+  .page-heading {
+    margin-bottom: 24px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-panels {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "title": "Your personal newsletter recommendations",
+  "subtitle": "Based on your interests, we recommend these email newsletters. Written by our journalists, select those you would like to receive.",
+  "choices": [
+    {
+      "id": "environment",
+      "title": "Environment",
+      "frequency": "WEEKLY",
+      "description": "The latest climate news, book and podcast reviews and reasons to be cheerful."
+    },
+    {
+      "id": "politics",
+      "title": "Politics",
+      "frequency": "DAILY",
+      "description": "Our insider’s guide to Westminster, plus a rundown of PMQs every Wednesday."
+    },
+    {
+      "id": "us",
+      "title": "US",
+      "frequency": "WEEKLY",
+      "description": "A balanced, fair and fact-checked take on global news and culture for our US readers."
+    },
+    {
+      "id": "ireland",
+      "title": "Ireland",
+      "frequency": "WEEKLY",
+      "description": "The week’s biggest stories from the Ireland edition of The Times and The Sunday Times."
+    },
+    {
+      "id": "scotland",
+      "title": "Scotland",
+      "frequency": "WEEKLY",
+      "description": "Your weekend briefing from the Scotland edition of The Times and The Sunday Times."
+    },
+    {
+      "id": "fashion",
+      "title": "Fashion",
+      "frequency": "WEEKLY",
+      "description": "Look good and feel great with the latest tips and trends from our fashion team."
+    },
+    {
+      "id": "luxury",
+      "title": "Luxury",
+      "frequency": "WEEKLY",
+      "description": "The inside track on tech, travel, philanthropy and the hottest handbags, cars and spas."
+    },
+    {
+      "id": "travel",
+      "title": "Travel",
+      "frequency": "WEEKLY",
+      "description": "Get inspiration for your next trip and a great deal thanks to our carefully curated offers."
+    }
+  ]
+}
